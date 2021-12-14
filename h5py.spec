@@ -4,7 +4,7 @@
 #
 Name     : h5py
 Version  : 3.6.0
-Release  : 66
+Release  : 67
 URL      : https://files.pythonhosted.org/packages/0a/39/62ec4c1cc96408f6cf27c1d10a26409b98eb6aa2dda7d9c48d204c09b970/h5py-3.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/0a/39/62ec4c1cc96408f6cf27c1d10a26409b98eb6aa2dda7d9c48d204c09b970/h5py-3.6.0.tar.gz
 Summary  : Read and write HDF5 files from Python
