@@ -4,7 +4,7 @@
 #
 Name     : pypi-h5py
 Version  : 3.7.0
-Release  : 77
+Release  : 78
 URL      : https://files.pythonhosted.org/packages/c5/40/7cf58e6230f0e76699f011c6d293dd47755997709a303a4e644823f3a753/h5py-3.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c5/40/7cf58e6230f0e76699f011c6d293dd47755997709a303a4e644823f3a753/h5py-3.7.0.tar.gz
 Summary  : Read and write HDF5 files from Python
