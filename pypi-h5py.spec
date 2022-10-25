@@ -4,7 +4,7 @@
 #
 Name     : pypi-h5py
 Version  : 3.7.0
-Release  : 81
+Release  : 82
 URL      : https://files.pythonhosted.org/packages/c5/40/7cf58e6230f0e76699f011c6d293dd47755997709a303a4e644823f3a753/h5py-3.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c5/40/7cf58e6230f0e76699f011c6d293dd47755997709a303a4e644823f3a753/h5py-3.7.0.tar.gz
 Summary  : Read and write HDF5 files from Python
@@ -95,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656401984
+export SOURCE_DATE_EPOCH=1666723075
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -104,8 +104,8 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
-export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx"
-export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx "
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
@@ -117,9 +117,9 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-h5py
-cp %{_builddir}/h5py-3.7.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-h5py/75e30d84df76091f6aaa16a714073a72127a8158
-cp %{_builddir}/h5py-3.7.0/licenses/license.txt %{buildroot}/usr/share/package-licenses/pypi-h5py/0bd06351d2b2e5f425c31b1ef097c8f6079a5eb1
-cp %{_builddir}/h5py-3.7.0/lzf/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-h5py/aa5045989d4313b21faf709c6fa3e83ba81c2ed5
+cp %{_builddir}/h5py-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-h5py/75e30d84df76091f6aaa16a714073a72127a8158 || :
+cp %{_builddir}/h5py-%{version}/licenses/license.txt %{buildroot}/usr/share/package-licenses/pypi-h5py/0bd06351d2b2e5f425c31b1ef097c8f6079a5eb1 || :
+cp %{_builddir}/h5py-%{version}/lzf/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-h5py/aa5045989d4313b21faf709c6fa3e83ba81c2ed5 || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
