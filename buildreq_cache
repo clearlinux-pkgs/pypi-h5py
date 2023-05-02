@@ -1,0 +1,5 @@
+3.8.0
+pypi(cython)
+pypi(numpy)
+pypi(pkgconfig)
+python3-dev
