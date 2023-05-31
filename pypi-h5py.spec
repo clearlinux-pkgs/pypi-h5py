@@ -5,7 +5,7 @@
 #
 Name     : pypi-h5py
 Version  : 3.8.0
-Release  : 86
+Release  : 87
 URL      : https://files.pythonhosted.org/packages/69/f4/3172bb63d3c57e24aec42bb93fcf1da4102752701ab5ad10b3ded00d0c5b/h5py-3.8.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/69/f4/3172bb63d3c57e24aec42bb93fcf1da4102752701ab5ad10b3ded00d0c5b/h5py-3.8.0.tar.gz
 Summary  : Read and write HDF5 files from Python
@@ -20,6 +20,7 @@ BuildRequires : pypi(cython)
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(pkgconfig)
 BuildRequires : pypi(py)
+BuildRequires : pypi(setuptools)
 BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
 BuildRequires : pypi-tox
@@ -77,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683039174
+export SOURCE_DATE_EPOCH=1685557846
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
