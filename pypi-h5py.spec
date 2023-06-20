@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-h5py
-Version  : 3.8.0
-Release  : 87
-URL      : https://files.pythonhosted.org/packages/69/f4/3172bb63d3c57e24aec42bb93fcf1da4102752701ab5ad10b3ded00d0c5b/h5py-3.8.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/69/f4/3172bb63d3c57e24aec42bb93fcf1da4102752701ab5ad10b3ded00d0c5b/h5py-3.8.0.tar.gz
+Version  : 3.9.0
+Release  : 88
+URL      : https://files.pythonhosted.org/packages/57/ea/e59bf321fdbfed5ada0b856b3ed1d319733adaebe55aeb132673b5aa8501/h5py-3.9.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/57/ea/e59bf321fdbfed5ada0b856b3ed1d319733adaebe55aeb132673b5aa8501/h5py-3.9.0.tar.gz
 Summary  : Read and write HDF5 files from Python
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -67,10 +67,10 @@ python3 components for the pypi-h5py package.
 
 
 %prep
-%setup -q -n h5py-3.8.0
-cd %{_builddir}/h5py-3.8.0
+%setup -q -n h5py-3.9.0
+cd %{_builddir}/h5py-3.9.0
 pushd ..
-cp -a h5py-3.8.0 buildavx2
+cp -a h5py-3.9.0 buildavx2
 popd
 
 %build
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685557846
+export SOURCE_DATE_EPOCH=1687272630
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
